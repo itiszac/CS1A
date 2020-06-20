@@ -1,5 +1,5 @@
-// Attached: HW_3b
-// File: HW_3b.cpp
+// Attached: HW_3a
+// File: HW_3a.cpp
 //===============================================================================
 //
 // Programmer: Zachary Meyer
@@ -11,39 +11,46 @@
 //==============================================================================
 // Description:
 //			Takes an input from the console,
-//			2 integers, calculates the quotient and remainder,
-//			displays to console
+//			january, february, and march sales,
+//			calculates a total amount and the tax
 //==============================================================================
 //==============================================================================
 
 #include <iostream>
+#include <iomanip>
+
+const float TAX_RATE = 0.07f;
 
 int main()
 {
-	int first_number = 0, second_number = 0;
+	float jan_sales = 0, feb_sales = 0, mar_sales = 0;
 
-	std::cout << "Enter the first number:  ";
-	std::cin >> first_number;
+	std::cout << "Enter January sales:  ";
+	std::cin >> jan_sales;
 
-	std::cout << "Enter the second number:  ";
-	std::cin >> second_number;
+	std::cout << "Enter February sales:  ";
+	std::cin >> feb_sales;
 
-	int quotient = first_number / second_number;
-	int remainder = first_number % second_number;
+	std::cout << "Enter March sales:  ";
+	std::cin >> mar_sales;
 
-	std::cout << first_number << " divided by " << second_number << " equals " << quotient << " with a remainder of " << remainder << "." << std::endl;
+	float total = jan_sales + feb_sales + mar_sales;
+	std::cout << "\nTotal sales for the first three months is $" << total << "," << std::endl;
+	std::cout << "and the amount of sales tax is $" << std::fixed << std::setprecision(2) << total * TAX_RATE << std::endl;
 
 	return 0;
 }
 
 /*
-============= OUTPUT ===============
+================== OUTPUT ==================
+Enter January sales:  1101.55
+Enter February sales:  2321.22
+Enter March sales:  3313.12
 
-Enter the first number:  126
-Enter the second number:  31
-126 divided by 31 equals 4 with a remainder of 2.
+Total sales for the first three months is $6735.89,
+and the amount of sales tax is $471.51
 
-C:\Users\zachw\source\repos\HW_3\Debug\HW_3b.exe (process 28004) exited with code 0.
+C:\Users\zachw\source\repos\HW_3\Debug\HW_3.exe (process 30856) exited with code 0.
 To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
 Press any key to close this window . . .
 */
