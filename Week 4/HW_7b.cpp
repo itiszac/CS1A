@@ -20,6 +20,21 @@
 #include <iomanip>
 #include <cmath>
 
+int getDivisor();
+double calcSquare(int number);
+void findNumbers(int divisor);
+
+int main()
+{
+	int divisor = getDivisor();
+
+	std::cout << "\nHere are the numbers, from 0 to 100, that are\nevenly divisible by " << divisor << ", and their squares:\n\n";
+
+	findNumbers(divisor);
+
+	return 0;
+}
+
 int getDivisor()
 {
 	int divisor = 0;
@@ -41,17 +56,6 @@ void findNumbers(int divisor)
 		if (i % divisor == 0)
 			std::cout << std::setw(2) << i
 			<< std::setw(9) << calcSquare(i) << std::endl;
-}
-
-int main()
-{
-	int divisor = getDivisor();
-
-	std::cout << "\nHere are the numbers, from 0 to 100, that are\nevenly divisible by " << divisor << ", and their squares:\n\n";
-
-	findNumbers(divisor);
-
-	return 0;
 }
 
 /*
