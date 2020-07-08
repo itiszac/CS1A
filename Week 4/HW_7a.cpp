@@ -18,6 +18,27 @@
 #include <iostream>
 #include <cmath>
 
+double getSide();
+double calcSideC(double sideA, double sideB);
+void displaySideC(double sideC);
+
+int main()
+{
+	double sideA = 0.0, sideB = 0.0;
+
+	std::cout << "Enter two sides of a right triangle." << std::endl;
+
+	std::cout << "\nSide A:" << std::endl;
+	sideA = getSide();
+
+	std::cout << "\nSide B:" << std::endl;
+	sideB = getSide();
+
+	displaySideC(calcSideC(sideA, sideB));
+
+	return 0;
+}
+
 double getSide()
 {
 	double dimension = 0.0;
@@ -36,23 +57,6 @@ double calcSideC(double sideA, double sideB)
 void displaySideC(double sideC)
 {
 	std::cout << "\nThe dimension of Side C is:  " << sideC << ".\n";
-}
-
-int main()
-{
-	double sideA = 0.0, sideB = 0.0;
-
-	std::cout << "Enter two sides of a right triangle." << std::endl;
-
-	std::cout << "\nSide A:" << std::endl;
-	sideA = getSide();
-
-	std::cout << "\nSide B:" << std::endl;
-	sideB = getSide();
-
-	displaySideC(calcSideC(sideA, sideB));
-
-	return 0;
 }
 
 /*
