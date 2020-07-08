@@ -1,3 +1,3 @@
-# CS1A 2020 Summer Semester Saddleback College
+# CS1A Saddleback College
 
 Homework questions and the respective solutions
