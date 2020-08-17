@@ -1,3 +1,3 @@
-# CS1A Saddleback College
+# CS 1A Saddleback College
 
-Homework questions and their respective solutions
+Homework questions and the respective solutions
